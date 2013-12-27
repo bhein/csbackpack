@@ -82,7 +82,7 @@ $cakeDescription = __('CSBackpack');
                         </li>
                         <li id="fat-menu" class="dropdown">
                             <?php if(!$this->Session->check('User.steamid')){ ?>
-                                <a href="/users/login"><img src="http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_small.png"></a>
+                                <a href="/steamauth/login"><img src="http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_small.png"></a>
                             <?php } else { ?>
                                 <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><img height="24" width="24" src="<?php echo $this->Session->read("User.avatar"); ?>" style="border-color: #FFF; border-width: medium;"> <?php if($this->Session->read("User.rank") >= 3){ echo "♕"; } ?> <?php echo $this->Session->read("User.name"); ?> <i class="icon-white icon-caret-down"></i></a>
                             <?php } ?>
