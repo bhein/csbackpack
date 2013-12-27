@@ -1,6 +1,5 @@
 <?php
-require_once(APP . 'Vendor' . DS . '/vdfparser.php');
-require_once(APP . 'Vendor' . DS . '/simple_html_dom.php');
+
 App::uses('HttpSocket', 'Network/Http');
 class SteamSource extends DataSource {
     function __construct($config) {
@@ -72,46 +71,7 @@ class SteamSource extends DataSource {
                     $results[$model->useTable][] = $data;
                 }
                 break;
-            case "steamschemas":
-                $url = "/IEconItems_730/GetSchemaURL/v0001/";
-                $url .= "?key={$this->config['apikey']}&language=en";
-                $response = json_decode($this->connection->get($url), true);
-                $url = $response['result']['items_game_url'];
-                $response = VDFParse($this->connection->get($url));
 
-                $results[$model->useTable] = array();
-                foreach($response as $data)
-                {
-                    $results[$model->useTable][] = $data;
-                }
-
-                break;
-            case "steamwebschemas":
-                $url = "/IEconItems_730/GetSchema/v0001/";
-                $url .= "?key={$this->config['apikey']}&language=en";
-                $response = json_decode($this->connection->get($url), true);
-                $results[$model->useTable] = array();
-                foreach($response as $data)
-                {
-                    $results[$model->useTable][] = $data;
-                }
-                break;
-            case "steammarkets":
-                $query = $queryData['conditions']['query'];
-                $response = file_get_html("http://steamcommunity.com/market/search?q=appid:730%20" . urlencode($query));
-                $results[$model->useTable] = array();
-                foreach($response->find('div#result_0') as $element){
-                    $results[$model->useTable][] = $element->innertext;
-                }
-                break;
-            case "local_skins":
-
-                $response = VDFParse(file_get_contents(APP . 'Vendor' . DS . '/csgo_english.txt'));
-                $results[$model->useTable] = array();
-                foreach($response as $data)
-                {
-                    $results[$model->useTable][] = $data;
-                }
 
         }
         return $results;
