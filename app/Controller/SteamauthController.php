@@ -10,7 +10,7 @@ class SteamauthController extends AppController {
     public $components = array('Openid' => array('accept_google_apps' => false));
 
     public function login() {
-        header('X-XRDS-Location: http://' . $_SERVER['SERVER_NAME'] . $this->webroot . 'users/xrds');
+        header('X-XRDS-Location: http://' . $_SERVER['SERVER_NAME'] . $this->webroot . 'steamauth/xrds');
 
         $returnTo = 'http://'.$_SERVER['SERVER_NAME'].$this->webroot;
 
