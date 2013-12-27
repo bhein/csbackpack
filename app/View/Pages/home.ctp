@@ -24,7 +24,7 @@ App::uses('Debugger', 'Utility');
 ?>
 <div class="lead jumbotron">
     <h1>Welcome to <span style="color:#c48621">CS</span>BACKPACK</h1>
-    <p class="lead">counter-strike: global offensive player & market statistics</p>
+    <p class="lead">Counter-Strike Global Offensive Player & Market Statistics</p>
 </div>
 <div class="row">
     <div class="col-md-6">
