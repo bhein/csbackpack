@@ -11,7 +11,7 @@ class SteamauthController extends AppController {
 
     public function login() {
         $realm = 'http://' . $_SERVER['HTTP_HOST'];
-        $returnTo = $realm . '/users/login';
+        $returnTo = $realm . '/steamauth/login';
 
         if (!$this->request->isPost() && !$this->Openid->isOpenIDResponse()) {
             try {
