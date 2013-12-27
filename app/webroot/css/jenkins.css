@@ -1,5 +1,5 @@
 #top-panel {
-    background: #2b3238;
+    background: #003F80;
     background-size:100% 100%;
 }
 #top-panel td#login-field span a {
@@ -9,7 +9,7 @@
     height: auto;
     width: auto; }
 #top-panel td > a {
-    background: url("http://b.drtshock.com/images/drtshockcibanner2.png") 0 0 no-repeat;
+    background: url("http://i.imgur.com/yspRFQ6.png") 0 0 no-repeat;
     display: block;
     width: 354px;
     height: 40px;
