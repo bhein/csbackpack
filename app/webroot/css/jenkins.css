@@ -1,7 +1,23 @@
-@charset "utf-8";
+#top-panel {
+    background: #2b3238;
+    background-size:100% 100%;
+}
+#top-panel td#login-field span a {
+    background: none; }
+#top-panel td #searchform a {
+    background: none;
+    height: auto;
+    width: auto; }
+#top-panel td > a {
+    background: url("http://b.drtshock.com/images/drtshockcibanner2.png") 0 0 no-repeat;
+    display: block;
+    width: 354px;
+    height: 40px;
+    margin: 10px 0 10px 10px; }
+#top-panel td > a img {
+    display: none; }
 
-body, table, form, input, td, th, p, textarea, select {
-    font-family: "メイリオ","Meiryo","ヒラギノ角ゴ Pro W3",
-    "Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック", "MS P Gothic","Osaka",
-    Verdana,Arial, Helvetica, sans-serif;
+#main-table {
+    background-color: #fff !important;
+    background-image: none !important;
 }
