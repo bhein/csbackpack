@@ -6,7 +6,7 @@
  * Time: 11:27 AM
  */
 
-class OpenIDController extends AppController {
+class SteamauthController extends AppController {
     public $components = array('Openid' => array('accept_google_apps' => false));
 
     public function login() {
