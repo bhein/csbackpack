@@ -8,6 +8,7 @@
 
 class SteamauthController extends AppController {
     public $components = array('Openid' => array('accept_google_apps' => false));
+    public $uses = array('Steamplayer');
 
     public function login() {
         $realm = 'http://' . $_SERVER['HTTP_HOST'];
