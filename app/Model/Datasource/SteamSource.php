@@ -7,7 +7,7 @@ class SteamSource extends DataSource {
         parent::__construct($config);
     }
     public function listSources() {
-        return array('steamnews','steamplayers','steamachievements','steaminventories','steamschemas', 'steamwebschemas', 'steammarkets', 'local_skins');
+        return array('steamnews','steamplayers','steamachievements','steaminventories');
     }
     public function read($model, $queryData = array())
     {
