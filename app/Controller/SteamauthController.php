@@ -7,7 +7,7 @@
  */
 
 class SteamauthController extends AppController {
-    public $components = array('Openid' => array('accept_google_apps' => false));
+    public $components = array('Openid' => array('accept_google_apps' => false), 'Auth');
     public $uses = array('Steamplayer');
 
     public function login() {
@@ -44,6 +44,7 @@ class SteamauthController extends AppController {
                 $this->Session->write('User.name', $data['personaname']);
                 $this->Session->write('User.avatar', $data['avatar']);
                 $this->Session->write('User.rank', 3);
+
 
                 return $this->redirect('/');
             }
